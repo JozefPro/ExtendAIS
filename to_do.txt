@@ -1,0 +1,89 @@
+# Plan to Complete Extension
+
+## 1. Define Requirements
+The extension must:
+- Extract grades and their percentages from KTU AIS.
+- Calculate the current GPA based on stored grades.
+- Allow users to input a desired GPA.
+- Generate a grade plan suggesting required scores to achieve the target GPA.
+- Store and retrieve user data persistently.
+- Ensure compatibility with the latest KTU AIS interface.
+
+## 2. Research and Analysis
+- Inspect KTU AIS gradebook layout in Developer Tools (F12).
+- Identify HTML elements where grades and percentages are stored.
+- Research how other GPA calculators function.
+- Analyze user needs—do students prefer a simple number, or do they want detailed analytics?
+
+## 3. Design
+### UI Mockups
+Improve `popup.html` to include:
+- A GPA display section.
+- An input field for setting a target GPA.
+- A section showing required grades to reach the target GPA.
+- Ensure it fits inside Chrome’s extension popup constraints.
+
+### UX Flow
+1. The user installs the extension.
+2. Visits KTU AIS.
+3. Data is extracted.
+4. GPA is calculated.
+5. The user sets a target GPA.
+6. A study plan is generated.
+
+## 4. Development
+### 4.1 Extract Grades from KTU AIS
+- Modify `content.js` to:
+    - Find and extract grade values from the webpage.
+    - Store them in `chrome.storage.local`.
+- **Test:** Open KTU AIS and verify if grades are stored correctly.
+
+### 4.2 Implement GPA Calculation
+- Modify `popup.js` to:
+    - Retrieve stored grades.
+    - Apply GPA calculation formula.
+    - Display the result in `popup.html`.
+- **Test:** Ensure calculations match KTU's official GPA system.
+
+### 4.3 Implement Target GPA and Planning Logic
+- Add an input field for the desired GPA in `popup.html`.
+- Write a function in `popup.js` to:
+    - Compare the current GPA with the target GPA.
+    - Suggest the grades needed in upcoming courses to reach the target.
+- **Test:** Enter different GPA targets and check the accuracy of recommendations.
+
+### 4.4 UI & Interaction Improvements
+- Improve `popup.html` layout for readability.
+- Add a reset button to clear stored grades.
+- Optimize `content.js` so it runs only when necessary (avoid unnecessary page scrapes).
+- **Test:** Ensure smooth interactions with buttons and displays.
+
+## 5. Testing
+- **Unit Testing:** Verify each function works (extract, store, calculate, suggest).
+- **Integration Testing:** Ensure correct data flow from `content.js` → `chrome.storage` → `popup.js`.
+- **Edge Case Testing:**
+    - Missing grades.
+    - Multiple courses.
+    - Incorrect grade formats.
+- **User Testing:** Ask fellow students to test the extension and provide feedback.
+
+## 6. Documentation
+- Write clear comments in the code for maintainability.
+- Create a `README.md` explaining:
+    - How to install and use the extension.
+    - How GPA is calculated.
+    - How to interpret the grade plan.
+
+## 7. Deployment
+- Test in developer mode (`chrome://extensions/`).
+- Package the extension and prepare it for release.
+- Publish on the Chrome Web Store (if applicable).
+- Monitor for issues after deployment.
+
+## 8. Maintenance and Updates
+- Fix bugs and optimize performance.
+- Adapt the extension if KTU AIS changes its structure.
+- Gather user feedback and improve features.
+- Possible future features:
+    - Graphs showing GPA trends.
+    - Integration with other academic tools.
