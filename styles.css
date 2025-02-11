@@ -1,29 +1,49 @@
 body {
-    width: 100%;
-    text-align: left;
     font-family: Arial, sans-serif;
+    width: 100%;
+   
 }
 
 .container {
-    display: flex;
-    width: 200px;
-    flex-direction: column;
-    gap: 10px;
+    border: 2px solid black;
+    padding: 15px;
+    width: 400px;
+    text-align: left;
+    background-color: white;
 }
 
-input {
-    padding: 5px;
-    width: 90%;
+h2 {
+    font-weight: bold;
+}
+#error {
+    color: red;
+    font-weight: bold;
+}
+
+#student-data {
+    font-weight: bold;
 }
 
 button {
-    padding: 5px;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: green;
     color: white;
-    border: none;
+    border: 2px solid black;
     cursor: pointer;
+    width: 100%;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: darkgreen;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+button {
+    flex: 1; 
 }
