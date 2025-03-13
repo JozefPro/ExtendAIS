@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="config-container">
+        <h2>Configuration Settings</h2>
+
+        <!-- GPA Table -->
+        <table id="gpa-table">
+            <thead>
+                <tr>
+                    <th>Module ID</th>
+                    <th>Module Name</th>
+                    <th>Marks' values</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Hardcoded Placeholder Module -->
+                <tr>
+                    <td>P000X000</td>
+                    <td>Placeholder Module</td>
+                    <td>
+                        LB1: 8.00, LB2: 7.50, TE5: 6.75, LB10: 9.00
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <button id="save-settings">Save Settings</button>
+            <button id="close">Close</button>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>

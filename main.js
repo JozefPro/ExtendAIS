@@ -40,4 +40,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    document.getElementById("min").addEventListener("click", function () {
+        console.log("MIN button clicked");
+        alert("MIN button functionality to be implemented");
+    });
+
+    document.getElementById("max").addEventListener("click", function () {
+        console.log("MAX button clicked");
+        alert("MAX button functionality to be implemented");
+    });
+
+    document.getElementById("config").addEventListener("click", function () {
+        console.log("config button clicked");
+        chrome.windows.create({
+            url: "config.html",  // This is the page for the larger window
+            type: "popup",
+            width: 600,
+            height: 500
+        });
+    });
+
+
+
 });

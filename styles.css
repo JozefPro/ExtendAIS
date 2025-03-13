@@ -10,6 +10,7 @@ body {
     width: 400px;
     text-align: left;
     background-color: white;
+    position: relative; 
 }
 
 h2 {
@@ -27,11 +28,12 @@ h2 {
 button {
     padding: 10px;
     background-color: green;
-    color: white;
+    color: rgb(255, 255, 255);
     border: 2px solid black;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
+    flex: 1; 
 }
 
 button:hover {
@@ -41,9 +43,60 @@ button:hover {
 .button-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Adds spacing between buttons */
+    gap: 10px; 
+}
+#save-settings{
+    width: 120px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    position: absolute;
+    top: 10px; /* Adjust vertical position */
+    right: 140px; /* Adjust horizontal position */
 }
 
-button {
-    flex: 1; 
+#close {
+    width: 120px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    position: absolute;
+    top: 10px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+}
+
+#config {
+    position: absolute;
+    top: 10px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+    width: auto; /* Prevent stretching */
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#config:hover {
+    background-color: darkgreen;
+}
+
+/* Table Styles */
+#gpa-table {
+    width: auto; /* Prevent stretching */
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#gpa-table th, #gpa-table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    min-width: 80px; /* Fixed column width */
+}
+
+#gpa-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Ensure inputs do not stretch */
+#gpa-table input {
+    width: 60px;
+    text-align: center;
 }

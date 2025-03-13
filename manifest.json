@@ -1,10 +1,10 @@
 {
     "manifest_version": 3,
     "name": "GPA_tracker",
-    "version": "2.04",
+    "version": "2.05",
 
     "description": "Extension for KTU AIS page. Desiged to track your GPA.",
-    "permissions": ["storage", "activeTab", "scripting"],
+    "permissions": ["storage", "activeTab", "scripting", "windows"],
     "host_permissions": ["https://uais.cr.ktu.lt/"],
 
     "background": {
@@ -19,7 +19,7 @@
 },
 
 "action": {
-    "default_popup": "popup.html",
+    "default_popup": "main.html",
     "default_icon": 
     {
       "16": "icons/menu_icon2_16.png",
