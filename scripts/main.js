@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             resetBtn.hidden = true;
             studentDataEl.hidden = true;
             errorMsg.hidden = false;
+            configBtn.hidden = true;
             errorMsg.textContent = "This extension only works on KTU AIS.";
             return;
         } else {
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             minBtn.hidden = false;
             maxBtn.hidden = false;
             studentDataEl.hidden = false;
+            configBtn.hidden = false;
         }
     });
 
