@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Module Configuration</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="config-container">
-        <h2>List of modules</h2>
 
-        <button id="add-module" style="margin-bottom: 10px;">➕ Add new module</button>
+        <div class="header-bar">
+            <h2>Module Configuration</h2>
+            <button id="close">close</button>
+          </div>
+          
+          <button id="add-module" class="action-btn">➕ Add new module</button>
+          
 
         <table id="module-list" class="styled-table">
             <thead>
@@ -25,11 +30,9 @@
             </tbody>
         </table>
 
-        <div class="button-container">
-            <button id="close">Close</button>
-        </div>
+       
     </div>
 
-    <script src="config.js"></script>
+    <script src="js/config.js"></script>
 </body>
 </html>

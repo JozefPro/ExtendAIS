@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     configBtn.addEventListener("click", function () {
         chrome.windows.create({
-            url: "config.html",
+            url: "html/config.html",
             type: "popup",
-            width: 500,
-            height: 700
+            width: 600,
+            height: 500
         });
     });
 });
@@ -165,7 +165,7 @@ function displayModules() {
         const final = (totalWeighted / totalCredits).toFixed(2);
         const totalEl = document.createElement("div");
         totalEl.className = "gpa-total";
-        totalEl.innerHTML = `<h3>BENDRAS: ${final}</h3>`;
+        totalEl.innerHTML = `<h3>SEMESTRO VIDURKIS: ${final}</h3>`;
         moduleContainer.appendChild(totalEl);
     });
 }

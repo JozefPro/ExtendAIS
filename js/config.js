@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.addEventListener("click", (e) => {
                     const index = e.target.dataset.index;
                     chrome.windows.create({
-                        url: `edit_module.html?index=${index}`,
+                        url: `html/edit_module.html?index=${index}`,
                         type: "popup",
                         width: 600,
                         height: 600
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add new module
     document.getElementById("add-module").addEventListener("click", () => {
         chrome.windows.create({
-            url: "add_module.html",
+            url: "html/add_module.html",
             type: "popup",
             width: 600,
             height: 600

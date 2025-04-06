@@ -1,14 +1,14 @@
 {
     "manifest_version": 3,
     "name": "GPA_tracker",
-    "version": "2.6",
+    "version": "2.8",
 
     "description": "Extension for KTU AIS page. Desiged to track your GPA.",
     "permissions": ["storage", "activeTab", "scripting", "windows"],
     "host_permissions": ["https://uais.cr.ktu.lt/"],
 
     "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
 },
 
 "icons": {
@@ -19,7 +19,7 @@
 },
 
 "action": {
-    "default_popup": "main.html",
+    "default_popup": "html/main.html",
     "default_icon": 
     {
       "16": "icons/menu_icon2_16.png",
@@ -33,8 +33,8 @@
   "content_scripts": [
     {
       "matches": ["https://uais.cr.ktu.lt/*"],
-      "js": ["content.js"],
-      "css": ["styles.css"],
+      "js": ["js/content.js"],
+      "css": ["css/styles.css"],
       "run_at": "document_idle"
     }
   ],

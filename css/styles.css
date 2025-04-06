@@ -4,37 +4,28 @@ body {
     background-color: #f7f7f7;
     margin: 0;
     padding: 0;
-    
 }
 
 .container {
     border: 2px solid #4caf50;
     padding: 15px;
     width: 400px;
-    
     text-align: left;
     background-color: white;
     position: relative;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 10px auto;
-    
 }
 
-/* Header */
 h2 {
     font-weight: bold;
     text-align: center;
     padding: 10px;
-    background-color: #e8ffe8;
-    border: 2px solid #4caf50;
-    border-radius: 12px;
     font-size: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-top: 0;
 }
 
-/* Student info */
 #student-data, #error {
     margin-top: 10px;
     padding: 8px 12px;
@@ -55,16 +46,14 @@ h2 {
     font-weight: bold;
 }
 
-/* Buttons */
+/* Global Buttons */
 button {
     padding: 10px;
     background-color: green;
     color: white;
     border: 2px solid black;
     cursor: pointer;
-    width: 100%;
     font-weight: bold;
-    flex: 1;
     border-radius: 8px;
     font-size: 14px;
     transition: all 0.2s ease;
@@ -86,7 +75,7 @@ button:hover {
     width: 100%;
 }
 
-/* Config / Save Buttons (used in config.html) */
+/* Save / Close buttons */
 #save-settings {
     width: 120px;
     height: 40px;
@@ -96,19 +85,20 @@ button:hover {
 }
 
 #close {
-    width: 120px;
-    height: 40px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    background-color: green;
+    color: white;
+    border: 2px solid black;
+    padding: 12px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-
-#config:hover {
+#close:hover {
     background-color: darkgreen;
 }
 
-/* Collapsible bubble cards */
+/* Collapsible bubble cards (main popup) */
 details.module-bubble {
     margin-bottom: 15px;
     border: 2px solid #4caf50;
@@ -132,12 +122,13 @@ details.module-bubble summary {
     align-items: center;
     list-style: none;
 }
+
 details.module-bubble summary .m1 {
     font-weight: bold;
     color: #388e3c;
 }
+
 details.module-bubble:hover summary .m1 {
-    font-weight: bold;
     color: black;
 }
 
@@ -158,16 +149,7 @@ details.module-bubble ul {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
-.mark-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 6px;
-}
-
-.mark-row input {
-    width: 90px;
-}
-
+/* Header bar (popup + config) */
 .header-bar {
     display: flex;
     justify-content: space-between;
@@ -178,11 +160,11 @@ details.module-bubble ul {
     padding: 10px 14px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 10px;
-    gap: 12px; /* 👈 adds space between title and config */
+    gap: 12px;
 }
 
 .header-bar h2 {
-    flex-grow: 1; /* 👈 allows title to take full space */
+    flex-grow: 1;
     margin: 0;
     font-size: 22px;
     font-weight: bold;
@@ -199,9 +181,74 @@ details.module-bubble ul {
     border: 2px solid black;
     cursor: pointer;
     border-radius: 8px;
-    flex-shrink: 0; /* 👈 don't let it shrink title */
+    flex-shrink: 0;
 }
 
 #config:hover {
     background-color: darkgreen;
+}
+
+/* Config Page - Module List Table */
+#module-list {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #4caf50;
+}
+
+#module-list th {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+#module-list td {
+    background-color: #f4fff4;
+    padding: 10px;
+    border-top: 1px solid #c8e6c9;
+    font-size: 14px;
+}
+
+#module-list td button {
+    margin-right: 5px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#module-list td button:hover {
+    background-color: #388e3c;
+}
+
+/* Add Module Button */
+#add-module {
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#add-module:hover {
+    background-color: #388e3c;
+}
+
+/* Mark input row styling */
+.mark-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.mark-row input {
+    width: 90px;
 }
