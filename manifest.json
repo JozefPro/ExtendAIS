@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "GPA_tracker",
-    "version": "2.05",
+    "version": "2.6",
 
     "description": "Extension for KTU AIS page. Desiged to track your GPA.",
     "permissions": ["storage", "activeTab", "scripting", "windows"],

@@ -1,102 +1,167 @@
 body {
     font-family: Arial, sans-serif;
     width: 100%;
-   
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .container {
-    border: 2px solid black;
+    border: 2px solid #4caf50;
     padding: 15px;
     width: 400px;
+    
     text-align: left;
     background-color: white;
-    position: relative; 
+    position: relative;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    
 }
 
+/* Header */
 h2 {
     font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #e8ffe8;
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 0;
 }
-#error {
-    color: red;
-    font-weight: bold;
+
+/* Student info */
+#student-data, #error {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 #student-data {
+    background-color: #f4fff4;
+    border-left: 4px solid #4caf50;
     font-weight: bold;
 }
 
+#error {
+    background-color: #ffecec;
+    border-left: 4px solid #ff4444;
+    color: #a00;
+    font-weight: bold;
+}
+
+/* Buttons */
 button {
     padding: 10px;
     background-color: green;
-    color: rgb(255, 255, 255);
+    color: white;
     border: 2px solid black;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
-    flex: 1; 
+    flex: 1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
 }
 
 button:hover {
     background-color: darkgreen;
+    box-shadow: 0 0 8px rgba(0, 100, 0, 0.2);
 }
 
 .button-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px; 
+    gap: 10px;
+    margin-top: 10px;
 }
-#save-settings{
-    width: 120px; /* Fixed width */
-    height: 40px; /* Fixed height */
+
+/* Config / Save Buttons (used in config.html) */
+#save-settings {
+    width: 120px;
+    height: 40px;
     position: absolute;
-    top: 10px; /* Adjust vertical position */
-    right: 140px; /* Adjust horizontal position */
+    top: 10px;
+    right: 140px;
 }
 
 #close {
-    width: 120px; /* Fixed width */
-    height: 40px; /* Fixed height */
+    width: 120px;
+    height: 40px;
     position: absolute;
-    top: 10px; /* Adjust vertical position */
-    right: 10px; /* Adjust horizontal position */
+    top: 10px;
+    right: 10px;
 }
 
 #config {
     position: absolute;
-    top: 10px; /* Adjust vertical position */
-    right: 10px; /* Adjust horizontal position */
-    width: auto; /* Prevent stretching */
+    top: 10px;
+    right: 10px;
+    width: auto;
     background-color: green;
     color: white;
     padding: 10px;
     border: 2px solid black;
     cursor: pointer;
+    border-radius: 8px;
 }
+
 #config:hover {
     background-color: darkgreen;
 }
 
-/* Table Styles */
-#gpa-table {
-    width: auto; /* Prevent stretching */
-    border-collapse: collapse;
+/* Collapsible bubble cards */
+details.module-bubble {
+    margin-bottom: 15px;
+    border: 2px solid #4caf50;
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #f4fff4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease-in-out;
+}
+
+details.module-bubble:hover {
+    background-color: #528a52;
+}
+
+details.module-bubble summary {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+details.module-bubble summary .m1 {
+    font-weight: bold;
+    color: #388e3c;
+}
+details.module-bubble:hover summary .m1 {
+    font-weight: bold;
+    color: black;
+}
+
+details.module-bubble ul {
+    padding-left: 20px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
-#gpa-table th, #gpa-table td {
-    border: 1px solid black;
-    padding: 5px;
+.gpa-total {
+    margin-top: 10px;
+    background-color: #e8ffe8;
+    border: 1px solid #4caf50;
+    border-radius: 8px;
     text-align: center;
-    min-width: 80px; /* Fixed column width */
-}
-
-#gpa-table th {
-    background-color: #007BFF;
-    color: white;
-}
-
-/* Ensure inputs do not stretch */
-#gpa-table input {
-    width: 60px;
-    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
