@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     configBtn.addEventListener("click", function () {
         chrome.windows.create({
-            url: "html/config.html",
+            url: "../pages/config.html",
             type: "popup",
             width: 600,
             height: 500

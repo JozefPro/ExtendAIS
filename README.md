@@ -1,43 +1,74 @@
-GPA tracker (ExtendAIS) - KTU AIS Chrome Extension
+# GPA Tracker for KTU AIS
 
-GPA tracker (ExtendAIS) is a Google Chrome extension that enhances the KTU AIS system by adding additional functionalities and improving usability.
+This is a lightweight Google Chrome extension designed for students of Kaunas University of Technology (KTU) to track and calculate their GPA using data from the AIS system.
+
+---
+
+## 📦 Features
+
+- Parses student data from the AIS website (`uais.cr.ktu.lt`)
+- Displays all current modules and their average mark
+- Dynamically calculates weighted GPA
+- Allows inserting missing marks via "MIN", "MAX", or "Calculate GPA" buttons
+- Fully editable list of modules in the config window
+- Add, edit, or remove modules manually
+- GPA output is clean and styled
+- Config page for full control of input
+
+---
+
+## 🚀 Installation (Google store)
 
 
-🚀 Features
-Reads student data (name and id)
-ONLY works in https://uais.cr.ktu.lt/
 
-📥 Installation Guide
-Option 1: Download via GitHub
-1. Click the green Code button in the repository.
-2. Select Download ZIP.
-3. Extract the ZIP file on your computer.
+## 🚀 Installation (Developer Mode)
 
-Option 2: Clone via Git (Recommended)
-1. If you have Git installed, you can clone the repository directly:
-  git clone https://github.com/JozefPro/ExtendAIS.git
-  cd ExtendAIS
+1. **Download the extension**  
+   Either:
+   - Clone this repo, or  
+   - [Download the ZIP](https://github.com/yourname/ktu-gpa-extension/archive/refs/heads/main.zip) and extract it.
 
-🔧 How to Load the Extension in Chrome
-1. Open Google Chrome.
-2. Navigate to chrome://extensions/.
-3. Enable Developer Mode (top-right corner toggle).
-4. Click Load unpacked.
-5. Select the extracted/cloned folder (ExtendAIS).
-The extension will now be installed and active!
+2. **Open Chrome Extension Settings**  
+   Navigate to:  
+   `chrome://extensions/`
 
-🛠 Troubleshooting
-If the extension doesn’t load, make sure all required files (including manifest.json) are present.
+3. **Enable Developer Mode**  
+   Toggle the switch at the top right.
 
-Open the Developer Console (Ctrl + Shift + J) to check for errors.
+4. **Load the unpacked extension**  
+   Click `Load unpacked` and select the folder you downloaded/extracted.
 
-Ensure that you are running Google Chrome (Chromium-based browsers may also work but are not tested).
+5. **Done!**  
+   Open `https://uais.cr.ktu.lt` and click the extension icon to begin.
 
-📜 License
-This project is open-source. Feel free to contribute or modify as needed.
+---
 
-👨‍💻 Contribution
-If you'd like to contribute:
-Fork the repository
-Create a new branch
-Submit a pull request
+## 📁 Project Structure
+EXTENDAIS/
+├── icons/               # All icon assets
+├── info/                # Docs, planning (optional)
+├── pages/               # HTML views for each window
+│   ├── main.html
+│   ├── config.html
+│   ├── add_module.html
+│   └── edit_module.html
+├── scripts/             # JavaScript logic per view
+│   ├── main.js
+│   ├── config.js
+│   ├── add_module.js
+│   ├── edit_module.js
+│   ├── logic.js
+│   ├── content.js
+│   └── background.js
+├── styles/              # Shared CSS styles
+│   └── styles.css
+├── manifest.json        # Chrome extension manifest
+└── README.md            # This file
+
+## 🛠 Development Notes
+
+- Make sure you reload the extension from `chrome://extensions` after every code change.
+- All paths in HTML must be relative (e.g., `scripts/main.js`, not just `main.js`).
+- You can tweak popup size by changing the container size in `styles.css`.
+
+
