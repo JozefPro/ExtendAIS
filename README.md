@@ -28,6 +28,8 @@ This is a lightweight Google Chrome extension designed for students of Kaunas Un
    - Clone this repo, or  
    - [Download the ZIP](https://github.com/JozefPro/ExtendAIS/releases/download/v1/gpa-tracker-extension.zip) and extract it.
 
+   Download -> gpa-tracker-extension.zip
+
 2. **Open Chrome Extension Settings**  
    Navigate to:  
    `chrome://extensions/`
