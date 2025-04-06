@@ -34,7 +34,7 @@
     {
       "matches": ["https://uais.cr.ktu.lt/*"],
       "js": ["js/content.js"],
-      "css": ["css/styles.css"],
+      "css": ["styles.css"],
       "run_at": "document_idle"
     }
   ],
