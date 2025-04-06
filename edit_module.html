@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Module</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="config-container">
+        <h2>View and Edit Module</h2>
+
+        <label>Module ID: <input id="module-id" disabled></label><br>
+        <label>Module Name: <input id="module-name"></label><br>
+        <label>Credits (ECTS): <input id="module-credits" type="number" min="1" max="30"></label>
+
+        <h3>Marks</h3>
+        <div id="marks-container"></div>
+        <button id="add-mark">➕ Add New Mark</button>
+
+        <div class="button-container">
+            <button id="save">Save</button>
+            <button id="close">Close</button>
+        </div>
+    </div>
+
+    <script src="edit_module.js"></script>
+</body>
+</html>

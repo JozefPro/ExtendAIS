@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
         chrome.windows.create({
             url: "config.html",
             type: "popup",
-            width: 600,
-            height: 500
+            width: 500,
+            height: 700
         });
     });
 });
