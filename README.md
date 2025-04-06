@@ -26,7 +26,7 @@ This is a lightweight Google Chrome extension designed for students of Kaunas Un
 1. **Download the extension**  
    Either:
    - Clone this repo, or  
-   - [Download the ZIP](https://github.com/yourname/ktu-gpa-extension/archive/refs/heads/main.zip) and extract it.
+   - [Download the ZIP](https://github.com/JozefPro/ExtendAIS/releases/download/v1/gpa-tracker-extension.zip) and extract it.
 
 2. **Open Chrome Extension Settings**  
    Navigate to:  
